@@ -1,6 +1,6 @@
 #ifndef STACK_H
 #define STACK_H
-#include "dyn_arr.h"
+#include "DynamicArray.h"
 #include <cstdint>
 #include <stdexcept>
 #include <vector>
