@@ -32,13 +32,13 @@ void Characters::gainExp(int64_t e) {
         std::cout << "You have leveled up! Choose a stat to upgrade: 1 - max hp, 2 - damage, 3 - max mana, 4 - magic damage, 5 - resistance, 6 - magic resistance, 7 - crit chance, 8 - crit damage\n";
         std::cin >> answ;
         switch (answ) {
-            case 1: max_hp += 10;
-            case 2: dmg += 2;
-            case 3: max_mana += 10;
-            case 5: res += 1;
-            case 6: magic_res += 1;
-            case 7: crit_chance += 3;
-            case 8: crit_damage += 0.5;
+            case 1: max_hp += 10; break;
+            case 2: dmg += 2; break;
+            case 3: max_mana += 10; break;
+            case 5: res += 1; break;
+            case 6: magic_res += 1; break;
+            case 7: crit_chance += 3; break;
+            case 8: crit_damage += 0.5; break;
         }
         hp = max_hp;
         mana = max_mana;
