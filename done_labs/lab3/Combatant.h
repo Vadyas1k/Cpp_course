@@ -62,7 +62,6 @@ public:
     void getName() const override {
         std::cout << name << ":" << std::endl;
     }
-    void attack(Entity* target, int idx, int rand) override = 0;
     int64_t getExpForKill() const override {return exp_for_kill;}
     int64_t getLvl() const override {return lvl;}
     virtual ~Combatant() = default;
