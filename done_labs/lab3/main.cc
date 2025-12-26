@@ -1,7 +1,7 @@
 #include "Characters.h"
 #include "Enemy.h"
+#include <cstdint>
 #include <iostream>
-#include <string>
 #include <memory>
 
 std::unique_ptr<Characters> createCharacter(int choice) {
@@ -40,7 +40,7 @@ int main() {
     int answ;
     std::cin >> answ;
     std::unique_ptr<Entity> Char = createCharacter(answ);
-    std::unique_ptr<Enemy> curr_en;
+    std::unique_ptr<Entity> curr_en;
     while (Char->isAlive()) {
         answ = 2;
         isRunning = false;

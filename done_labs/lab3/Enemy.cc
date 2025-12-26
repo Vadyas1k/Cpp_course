@@ -19,9 +19,9 @@ void Enemy::attack(Entity* target, int idx, int rand) {
             return;
         }
         mana -= 10;
-        target->takeDamage(magic_damage, 1);
+        target->takeDamage(magic_damage * mult, 1);
     }
-    else target->takeDamage(dmg, 0);
+    else target->takeDamage(dmg * mult, 0);
 }
 Stats Enemy::goblin(int64_t lvl) {
     Stats goblin {

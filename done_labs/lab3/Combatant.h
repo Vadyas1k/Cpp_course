@@ -50,21 +50,22 @@ public:
 
     void takeDamage(int64_t damage, int idx) override;
     void heal(int64_t num) override;
-    int64_t getMagicRes() {return magic_res;}
+    int64_t getMagicRes() const {return magic_res;}
 
     bool isAlive() const override {
         return hp > 0;
     }
-    void get_stats() override {
+    void get_stats() const override {
         std::cout << "Stats:\ndmg: " << dmg << "\nres: " << res << "\nhp: " << hp << "\nmagic_dmg: " << magic_damage << "\nlvl: " << lvl << "\ncrit damage: " << crit_damage << "\ncrit chance: " << crit_chance << "\nmana: " << mana << "\nmagic_res: " << magic_res << "\nname: " << name << "\nmax_health: " << max_hp << "\nmax_mana: " << max_mana << std::endl;
     }
-    void get_hp_and_mana() override {std::cout << "Current health: " << hp << ", current mana: " << mana;}
-    void getName() override {
+    void get_hp_and_mana() const override {std::cout << "Current health: " << hp << ", current mana: " << mana;}
+    void getName() const override {
         std::cout << name << ":" << std::endl;
     }
     void attack(Entity* target, int idx, int rand) override = 0;
-    int64_t getExpForKill() override {return exp_for_kill;}
-    int64_t getLvl() override {return lvl;}
+    int64_t getExpForKill() const override {return exp_for_kill;}
+    int64_t getLvl() const override {return lvl;}
+    virtual ~Combatant() = default;
 };
 
 #endif // COMBATANT_H
